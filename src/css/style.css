@@ -1,28 +1,31 @@
 :root {
-    --primaryMain:   #ead784de;
-    --secondaryMain: #9fd5b4de;
-    --tertiaryMid1:  #94ccfb99;
-    --tertiaryFull:  #94ccfbff;
+    --primaryMain:   #A5D6A7de;
+    --tertiaryMain:  #90caf9de;
+    --tertiaryFull:  #90caf9ff;
+
     /*
-    full, main, mid1, mid2, dis, out
+    full, main, mid1, mid2, dis, out#6292ec
     ff,de,99,80,60,30
     */
-    --white1: #ffffff0c;
-    --white2: #ffffff12;
-    --white3: #ffffff20;
+    --white: #e3f2fd0c;
+    --whiteh2: #e3f2fd12;
+    --whiteh2to: #e3f2fd24;
+    --whiteh1: #e3f2fd20;
+    --whiteh1to: #e3f2fd38;
     --whiteDE:#ffffffde;
 }
 
 body {
-    background-color: #1f1f1f; /*#121212*/
+    background-color: #102030; /*#212121*/ /*#263238*/
     color: var(--whiteDE);
     font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
 }
 
-div.container { /*make layer, that creates impression div is above (material theme thingy)*/
+div.container {
     /*border: 2px solid #var(--whiteDE);*/
     /* background-color: #20294560; */
-    background-color:var(--white1);
+    background-color:var(--white);
     padding: 10px;
     width: 90%;
     max-width: 600px;
@@ -35,8 +38,22 @@ div.container { /*make layer, that creates impression div is above (material the
 		0px 1px 3px 0px hsla(0,0%,0%,0.2);
 }
 
+div.top-menu {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
 ul {
     padding-left: 60px;
+    padding-right: 20px;
+}
+
+ul.more-top{
+    margin-bottom: 0;
+}
+
+ul.more-bot{
+    margin-top: 0;
 }
 
 li {
@@ -46,11 +63,20 @@ li {
 }
 
 p.about {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+span.about {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
     color: var(--primaryMain);
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
+}
+
+div.details {
+    font-size: 0.8rem;
+    text-align: right;
+    padding-right: 20px;
 }
 
 p.teeny {
@@ -65,16 +91,15 @@ p.text {
     margin-bottom: 0.5rem;
     padding-left: 20px;
     padding-right: 20px;
-    text-align: justify;
 }
 
 h1 {
+    background: linear-gradient(to right, var(--whiteh2), var(--whiteh1to));
     font-size: 2.5rem;
     font-weight: 200;
     color: var(--primaryMain);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    background-color: #ffffff12;
 	box-shadow:
 		/* offset-x | offset-y | blur-radius | spread-radius | color */
 		0px 4px 5px 0px hsla(0,0%,0%,0.14),
@@ -83,12 +108,12 @@ h1 {
 }
 
 h2 {
+    background: linear-gradient(to right, var(--whiteh2), var(--whiteh2to));
     font-size: 1.75rem;
     font-weight: lighter;
-    color :var(--secondaryMain);
+    color :var(--primaryMain);
     margin-top: 0;
-    margin-bottom: 0.5rem;
-    background-color: var(--white1);
+    margin-bottom: 1rem;
         box-shadow:
             /* offset-x | offset-y | blur-radius | spread-radius | color */
             0px 1px 1px 0px hsla(0,0%,0%,0.14),
@@ -98,8 +123,10 @@ h2 {
 
 h3 {
     font-weight: bolder;
-    color: var(--secondaryMain);
+    color: var(--primaryMain);
     padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h6 {
@@ -121,17 +148,37 @@ h6 {
 }
 
 em {
-    font-style: normal;
-    color: var(--secondaryMain)
+    color: var(--primaryMain);
+    font-style: italic;
 }
 
 a {
-    color:var(--tertiaryMid1);
+    color:var(--tertiaryMain);
     text-decoration: none;
 }
 
 a:hover {
+    color:var(--tertiaryFull);
+    text-decoration: none;
+}
+
+a.header {
+    color: var(--primaryMain);
+    cursor: pointer;
+}
+
+span.pseudolink {
+    color: var(--tertiaryMain); /*ADD SOME FIREWORKZ*/
+    cursor: pointer;
+}
+
+span.pseudolink:hover {
     color: var(--tertiaryFull);
+    cursor: pointer;
+}
+
+span.email {
+    color: var(--primaryMain);
 }
 
 @media (max-width : 750px) {
