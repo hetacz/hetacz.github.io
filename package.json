@@ -2,6 +2,7 @@
   "name": "homepage",
   "version": "1.0.0",
   "description": "My portfolio page source code repository.",
+  "keywords": ["website", "portfolio"],
   "main": "index.html",
   "repository": {
     "type": "git",
