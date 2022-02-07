@@ -8,172 +8,236 @@
         <meta name="description" content="Rafał Michalski Home">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="src/css/style.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="src/media/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="src/media/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="src/media/favicon/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon/favicon-16x16.png">
         <link rel="manifest" href="src/img/favicon/site.webmanifest">
         <script defer src="src/js/script.js"></script>
     </head>
 
     <body>
-        <div id="top" class="container">
-            <h1>Hello World!</h1>
-            <p class="about">Rafał Michalski</p>
-            <p class="about">Test Automation & Stuff</p>
-            <p class="teeny">&nbsp;</p>
-            <a href="/data/resume.pdf">
-                <span>resume</span> <!-- maybe target _blank ref no no-->
-            </a>
-            <span>&nbsp;</span>
-            <a href="https://www.linkedin.com/in/rafallovesworking" target="_blank" rel="noopener noreferrer">
-                <span>linked in</span>
-            </a>
-            <span>&nbsp;</span>
-            <a href="https://github.com/hetacz" target="_blank" rel="noopener noreferrer">
-                <span>github</span>
-            </a>
-            <span>&nbsp;</span>
-            <a href="#">
-                <span>projects</span> <!-- anchor-->
-            </a>
-            <span>&nbsp;</span>
-            <a href="#email" id="email" title="Click to see my email address">
-                <span class="right">email</span> <!-- anchor-->
-                <!--Transform text to email :D-->
-            </a>
+        <section id="top">
+            <div id="header" class="container">
+                <h1>
+                    <a href="index.html" class="header">Hello World!</a>
+                </h1>
+                <p class="about">
+                    <span class="about">Rafał Michalski</span>
+                    <span class="right">
+                        <a href="https://www.linkedin.com/in/rafallovesworking" target="_blank"
+                            rel="noreferrer"><span>linked in</span>
+                        </a>
+                    </span>
+                </p>
+                <p class="about">
+                    <span class="about">Test Automation & Stuff</span>
+                    <span class="right">
+                        <a href="https://github.com/hetacz" target="_blank" rel="noreferrer">
+                            <span>github</span>
+                        </a>
+                    </span>
+                </p>
+                <p class="teeny">&nbsp;</p>
+                <div class="top-menu">
+                    <a href="index.html">
+                        <span>home</span>
+                    </a>
+                    <span>&nbsp;</span>
+                    <a href="/src/data/resume/RafałMichalski_EN.pdf" target="_blank" rel="noreferrer">
+                        <span>resume</span>
+                    </a>
+                    <span>&nbsp;</span>
+                    <a href="#projects">
+                        <span>projects</span> <!-- anchor-->
+                    </a>
+                    <span>&nbsp;</span>
+                    <a href="/src/data/pub.txt" target="_blank" rel="noreferrer">
+                        <span>my pgp</span> <!-- anchor-->
+                    </a>
+                    <span>&nbsp;</span>
+                    <span name="email" class="pseudolink right">email</span>
+                </div>
+            </div>
+        </section>
+        <section id="mid">
+            <div id="now" class="container">
+                <h2>&rarr;Now</h2>
+                <p class="text">
+                    Hello! My name is <em>Rafał Michalski</em>, an IT guy from Poland, who works as a <em>test
+                        automation
+                        engineer</em>. I am responsible for developing and maintaining test frameworks in
+                    <em>Selenium</em>
+                    and <em>Cypress</em>. I am fiendish about <em>code quality</em>, <em>good architecture</em> and
+                    <em>code maintainability</em> and I love to tweak with code in my spare time. I believe we should
+                    leave
+                    people in a better shape than they were before they met us. Therefore I work with people and
+                    enterprises
+                    that strive to <em>make world a better place</em>. <a href="#more-now" id="read-more-now">...read
+                        more</a>
+                </p>
+                <!-- these 3 paragraphs hidden -->
+            </div>
+            <div id="hire-me" class="container">
+                <h2>&rarr;Hire me!</h2>
+                <p class="text">
+                    Please use my time and expertise and <em>hire me!</em> Currently I am available for
+                    <em>part-time</em> and <em>fully remote</em> positions only. Feel free to read up about me bit more,
+                    or
+                    <span name="email" class="pseudolink">reach out to me</span> if you there is something you me to
+                    answer, or you are just feeling
+                    chatty.
+                </p>
+            </div>
+            <div id="exp" class="container">
+                <h2>&rarr;Experience</h2>
+                <p class="text">
+                    I have a knowledge required to build an enterprise level test automation framework, which I acquired
+                    when I was working
+                    on test automatization framework for factory management system for the <em>top pharmaceutical
+                        company</em> pharmaceutical manufacturing facility. <a href="#more-exp"
+                        id="read-more-exp">...read
+                        more</a>
+                </p>
+                <!-- these 4 paragraphs hidden -->
+            </div>
+            <div id="skills" class="container">
+                <h2>&rarr;Skills</h2>
+                <h3>IT skills:</h3>
+                <ul id="it-list" class="more-top">
+                    <!-- add class more-bot after click read more-->
+                    <li>Selenium framework building skills - TestNG, Maven/Gradle, Allure</li>
+                    <li>Cypress</li>
+                    <li>Java, Javascript, Typescript, HTML5, CSS3</li>
+                    <li>Experience in API testing</li>
+                    <li id="read-more-skills"><a href="#more-skills">...read more</a></li>
+                </ul>
+            </div>
+            <div id="projects" class="container">
+                <h2>&rarr;Projects</h2>
+                <p class="text">
+                    Some of my projects are available on my <a href="https://github.com/hetacz" target="_blank"
+                        rel="noreferrer">github</a> page. They include:
+                </p>
+                <ul>
+                    <li>
+                        Demo Selenium Framework - <a href="https://github.com/hetacz/DemoTestFramework" target="_blank"
+                            rel="noreferrer">link to github</a>
+                        - Scalable Selenium framework for an e-commerce website. Built with Maven, TestNG and Allure
+                        reporting. Written in Java 17.
+                    </li>
+                    <li>
+                        Demo Rest-assured Framework - <a href="https://github.com/hetacz/DemoRestAssuredFramework"
+                            target="_blank" rel="noreferrer">link to github</a>
+                        - Rest-assured framework for API testing. Built with Maven, TestNG and Allure reporting.
+                        Using Hamcrest assertions. Written in Java 17.
+                    </li>
+                    <li>
+                        Demo Cypress Framework - <a href="https://github.com/hetacz/Cypress-API-Tests-Demo"
+                            target="_blank" rel="noreferrer">link to github</a>
+                        - Demo Cypress framework for a <a href="https://medium.com" target="_blank"
+                            rel="noreferrer">medium.com</a> clone website. GUI and API testing. Written in
+                        Javascript.
+                    <li>
+                        A tic tac toe game with a GUI -
+                        <!--<a href="https://tictactoe.hetacz.com">play it here</a>. -->
+                        implementing <em>minimax</em>
+                        algorithm in Javascript.
+                        <a href="https://github.com/hetacz/tictactoe" target="_blank" rel="noreferrer">Link to
+                            github</a>.
+                    </li>
+                    <li>
+                        A Javascript sudoku solver with a GUI -
+                        <!-- <a href="http://sudoku.hetacz.com">check it out</a>.-->
+                        reads sudoku from a file,
+                        and solves
+                        it using "one value cell constraint" algorithm to save resources, before switching to
+                        <em>backtracking</em> algorithm if sudoku is not fully solved.
+                        <a href="https://github.com/hetacz/sudoku" target="_blank" rel="noreferrer">Link to
+                            github</a>.
+                    </li>
+                </ul>
+            </div>
+            <div id="certificates" class="container">
+                <h2>&rarr;Certificates</h2>
+                <p class="text">
+                    Here are a few certified courses that I completed to broaden my knowledge.
+                    <!-- div grid probably-->
+                </p>
+                <ul>
+                    <li>
+                        <em>Cypress</em> - Web Automation Testing from Zero to Hero.
+                        <div class="certificate no-mobile">
+                            <span id="link-cypress" class="pseudolink">Show certificate</span>
+                            <span class="right">Artem Bodnar. 8.5 total hours. Udemy.</span>
+                        </div>
+                        <div class="certificate mobile">
+                            Artem Bodnar. 8.5 total hours. Udemy.
+                            <span id="link-cypress-mobile" class="pseudolink">Show certificate</span>
+                        </div>
+                    </li>
+                    <li>
+                        <em>Selenium</em> Java Test Framework & Best Practices - Masterclass
+                        <div class="certificate no-mobile">
+                            <span id="link-selenium" class="pseudolink">Show certificate</span>
+                            <span class="right">Omprakash Chavan. 20.5 total hours, Udemy.</span>
+                        </div>
+                        <div class="certificate mobile">
+                            Omprakash Chavan. 20.5 total hours, Udemy.
+                            <span id="link-selenium-mobile" class="pseudolink">Show certificate</span>
+                        </div>
+                    </li>
+                    <li>
+                        The Complete <em>JavaScript</em> Course 2022: From Zero to Expert!
+                        <div class="certificate no-mobile">
+                            <span id="link-javascript" class="pseudolink">Show certificate</span>
+                            <span class="right">Jonas Schmedtmann. 69 total hours, Udemy.</span>
+                        </div>
+                        <div class="certificate mobile">
+                            Jonas Schmedtmann. 69 total hours, Udemy.
+                            <span id="link-javascript-mobile" class="pseudolink">Show certificate</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="edu" class="container">
+                <h2>&rarr;Education</h2>
+                <p class="text">
+                    I used to attend:
+                <ul>
+                    <li>
+                        2010-2013 <em>University of Warsaw</em>, where I studied
+                        <em>Mathematics</em>.
+                    </li>
+                    <li>
+                        2009-2013 <em>Warsaw School of Economics</em>, where I studied
+                        <em>Quantitative Methods</em>.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <div id="misc" class="container">
+                <h2>&rarr;Misc</h2>
+                <p class="text">
+                    A Polish version of the <a href="src/data/resume/RafalMichalski_PL.pdf" target="_blank"
+                        rel="noreferrer">resume</a>
+                </p>
+            </div>
+        </section>
+        <section id="bot">
+            <div id="footer" class="container">
+                <h6>&copy; 2021 - 2022 Rafał Michalski <a href="#top" class="right">▲ To the top ▲</a></h6>
+                <!-- or <a href> with class and link top-->
+            </div>
+        </section>
+        <!-- hidden -->
+        <div id="cert-javascript" class="overlay">
+            <img src="src/img/certificates/UC-0965772c-9419-4b1d-b00a-9737e26bf46e.jpg" class="overlay">
         </div>
-        <div id="now" class="container">
-            <h2>&rarr;Now</h2>
-            <p class="text">
-                Hello! My name is <em>Rafał Michalski</em>, an IT guy from Poland, who works as a <em>test automation
-                    engineer</em>. I am responsible for developing and maintaining test frameworks in <em>Selenium</em>
-                and <em>Cypress</em>. I am fiendish about <em>code quality</em>, <em>good architecture</em> and
-                <em>code maintainability</em> and I love to tweak with code in my spare time. I believe we should leave
-                people in a better shape than they were before they met us. Therefore I work with people and enterprises
-                that strive to <em>make world a better place</em>
-            </p>
-            <p class="text">
-                <a href="#">Read more</a> <!-- these 3 paragraphs hidden -->
-            </p>
-            <p class="text">
-                I like my job, as there are always challenges to overcome, which prevent me from getting bored. My
-                occupation gives me satisfaction from solving puzzles, even if some issues may sometimes turn to be a
-                little frustrating, the programmer high is no doubt worth time spent.
-            </p>
-            <p class="text">
-                Apart from working, I love to learn and read, I constantly try to improve myself, acquire new skills,
-                and even learn about random scientific facts. I can sometimes spend a night reading about some long lost
-                Bronze Age culture you probably never heard about, and then, in the morning spend few more hours reading
-                news from markets and only then sleep during the day.
-            </p>
-            <p class="text">
-                Investing money is other thing I do enjoy. I am currently involved in social lending, crypto, real
-                estate and crowdfunding among others. And on top of that, I used to own a pizzeria few years ago and I
-                was a quite good League of Legends player (Diamond Tier).
-            </p>
+        <div id="cert-selenium" class="overlay">
+            <img src="src/img/certificates/UC-3c69b1e7-4f7e-4187-9771-33927ba8d1b9.jpg" class="overlay">
         </div>
-        <div id="hireme" class="container">
-            <h2>&rarr;Hire me</h2>
-            <p class="text">
-                Please use my time and expertise and <a href="">hire me</a>! Currently I am available for
-                <em>part-time</em> projects only. Or
-                read about my experience and skills below, if you are not sold yet.
-            </p>
-        </div>
-        <div id="experience" class="container">
-            <h2>&rarr;Experience</h2>
-            <p class="text">
-                I have a knowledge required to build an enterprise level test automation framework, which I acquired
-                when I was working
-                on test automatization framework for factory management system for the <em>top pharmaceutical
-                    company</em> pharmaceutical manufacturing facility.
-            </p>
-            <p class="text">
-                <a href="#">Read more</a> <!-- these 4 paragraphs hidden -->
-            </p>
-            <p class="text">
-                I can build a <em>Selenium</em> framework with <em>Java 17</em> using <em>TestNG</em>, <em>Maven</em> or
-                <em>Gradle</em> with a <em>WebDriverManager</em> and
-                <em>Allure</em> using any popular Assertion Library. I know how to make such framework scalable, using
-                well-implemented <em>Page Object Pattern</em> with components and OOP principles in design. I am
-                familiar with
-                design patterns such as Facade, Factory and Singleton. I can integrate such framework with
-                <em>Github</em> or
-                <em>Azure</em> and configure pipelines for Continous Integration. I am also experienced with API
-                automation and have a working knowledge of <em>Rest-assured</em> library.
-            </p>
-            <p class="text">
-                <em>Cypress</em> is another tool I am fluent with and I've been using it with success in many smaller
-                (not
-                enterprise level) projects. I have a strong knowledge of <em>Javascript</em> and <em>Typescript</em>.
-            </p>
-            <p class="text">
-                Of course I am also fluent in <em>HTML5</em> and <em>CSS3</em> as well as <em>Gherkin</em> syntax.
-            </p>
-            <p class="text">
-                I am a huge fan of agile development and I also have a very positive experience of working in a
-                <em>SAFe</em>
-                (Scaled agile framework) team of hundreds of people. I also have working experience with different tools
-                for software development.
-            </p>
-        </div>
-        <div id="skills" class="container">
-            <h2>&rarr;Skills</h2>
-            <p class="text">
-            <h3>IT skills</h3>
-            <ul>
-                <li>Selenium framework building skills (TestNG, Maven/Gradle), Allure</li>
-                <li>Cypress</li>
-                <li>Java</li>
-                <li>Rest-assured, Jsoup</li>
-                <li>Javascript, Typescript</li>
-                <li>HTML5, CSS3</li>
-                <li>Postman</li>
-                <li>Github, Azure</li>
-                <li>JIRA</li>
-            </ul>
-            <h3>Languages</h3>
-            <ul>
-
-            </ul>
-            </p>
-        </div>
-        <div id="projects" class="container">
-            <h2>&rarr;Projects</h2>
-            <p class="text">
-                Some of my projects are available on my <a href="https://github.com/hetacz" target="_blank"
-                    rel="noopener noreferrer">github</a> page. They include:
-            </p>
-            <ul>
-                <li>
-                    <a href="#">Demo Selenium Framework</a>
-                    - Scalable Selenium framework for an e-commerce website. Built with Maven, TestNG and Allure
-                    reporting. Written in Java 17.
-                </li>
-                <li>
-                    <a href="#">Demo Rest-assured Framework</a>
-                    - Rest-assured framework for API testing. Built with Maven, TestNG and Allure reporting.
-                    Using Hamcrest assertions. Written in Java 17.
-                </li>
-                <li>
-                    <a href="#">Demo Cypress Framework</a>
-                    - Demo Cypress framework for a medium.com clone website. GUI and API testing. Written in
-                    Javascript.
-                <li>
-                    <a href="#">Tic tac toe</a>
-                    - Tic tac toe game with a GUI. Implementing <em>minimax</em> algorithm in Javascript.
-                </li>
-                <li>
-                    <a href="#">Sudoku</a>
-                    - Sudoku solver with a GUI. Reads sudoku from a file, and solves it using "one value cell
-                    constraint"
-                    algorithm to save resources, before switching to <em>backtracking</em> algorithm if sudoku is
-                    not fully solved.
-            </ul>
-        </div>
-        <div id="footer" class="container">
-            <h6>&copy; 2021 - 2022 Rafał Michalski <a href="#top" class="right">To the top</a></h6>
-            <!-- or <a href> with class and link top-->
+        <div id="cert-cypress" class="overlay">
+            <img src="src/img/certificates/UC-566712e4-9ff5-44b2-bc92-63360d0732fe.jpg" class="overlay">
         </div>
     </body>
 
