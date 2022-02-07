@@ -1,4 +1,25 @@
 'use strict';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: 'AIzaSyD5TtTEwp_Nx8UxifWrt1eLqkP6MLWKZuI',
+    authDomain: 'rafallovesdev.firebaseapp.com',
+    projectId: 'rafallovesdev',
+    storageBucket: 'rafallovesdev.appspot.com',
+    messagingSenderId: '362363594256',
+    appId: '1:362363594256:web:a1a35895514aef1a284c95',
+    measurementId: 'G-749WS2TCK4'
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const nowDiv = document.querySelector('#now');
 const expDiv = document.querySelector('#exp');
@@ -8,27 +29,70 @@ const nowReadMore = document.querySelector('#read-more-now');
 const expReadMore = document.querySelector('#read-more-exp');
 const skillsReadMore = document.querySelector('#read-more-skills');
 
-const emailSpan = document.querySelector('#email');
+const linkCypress = document.querySelector('#link-cypress');
+const linkCypressMobile = document.querySelector('#link-cypress-mobile');
+const linkSelenium = document.querySelector('#link-selenium');
+const linkSeleniumMobile = document.querySelector('#link-selenium-mobile');
+const linkJavascript = document.querySelector('#link-javascript');
+const linkJavascriptMobile = document.querySelector('#link-javascript-mobile');
+
+const overlayCypress = document.querySelector('#cert-cypress');
+const overlaySelenium = document.querySelector('#cert-selenium');
+const overlayJavascript = document.querySelector('#cert-javascript');
+
+const emailSpans = document.querySelectorAll('span[name="email"]');
 
 class App {
 
     constructor() {
-        this.#addInitialListeners(this.#showNow.bind(this), this.#showExp.bind(this), this.#showSkills.bind(this), this.#showEmail.bind(this));
+        this.#addInitialListeners(this.#showNow.bind(this), this.#showExp.bind(this), this.#showSkills.bind(this));
+        this.#addClickListeners(this.#showCert.bind(this), this.#hideCert.bind(this));
+        this.#addEmailListeners(this.#showEmail.bind(this));
     }
 
-    #addInitialListeners(showNow, showExp, showSkills, showEmail) {
+    #addInitialListeners(showNow, showExp, showSkills) {
         [showNow, showExp, showSkills].forEach((callback) => {
             window.addEventListener('load', callback);
             window.addEventListener('hashchange', callback);
         });
-        emailSpan.addEventListener('click', showEmail);
+    }
+
+    #addClickListeners(showCert, hideCert) {
+        [linkCypress, linkCypressMobile, linkSelenium, linkSeleniumMobile, linkJavascript, linkJavascriptMobile].forEach((el) => {
+            el.addEventListener('click', showCert);
+        });
+        [overlayCypress, overlayJavascript, overlaySelenium].forEach((el) => {
+            el.addEventListener('click', hideCert);
+        });
+    }
+
+    #addEmailListeners(listener) {
+        emailSpans.forEach((span) => {
+            span.addEventListener('click', listener);
+        });
+    }
+
+    #showCert(ev) {
+        if (ev.target === linkCypress || ev.target === linkCypressMobile) {
+            overlayCypress.style.display = 'block';
+        }
+        if (ev.target === linkSelenium || ev.target === linkSeleniumMobile) {
+            overlaySelenium.style.display = 'block';
+        }
+        if (ev.target === linkJavascript || ev.target === linkJavascriptMobile) {
+            overlayJavascript.style.display = 'block';
+        }
+    }
+
+    #hideCert() {
+        overlayCypress.style.display = 'none';
+        overlaySelenium.style.display = 'none';
+        overlayJavascript.style.display = 'none';
     }
 
     #showEmail() {
         const text = '\x72\x61\x66\x61\x6C\x6C\x6F\x76\x65\x73\x77\x6F\x72\x6B\x69\x6E\x67\x28\x61\x74\x29\x67\x6D\x61\x69\x6C\x28\x64\x6F\x74\x29\x63\x6F\x6D';
-        emailSpan.classList.remove('pseudolink');
-        emailSpan.classList.add('email');
-        emailSpan.textContent = text;
+        window.alert(text);
     }
 
     #showNow() {

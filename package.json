@@ -1,0 +1,23 @@
+{
+  "name": "rafalloves.dev",
+  "version": "1.0.0",
+  "description": "My portfolio page source code repository.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hetacz/homepage.git"
+  },
+  "author": "Rafał Michalski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hetacz/homepage/issues"
+  },
+  "homepage": "https://github.com/hetacz/homepage#readme",
+  "dependencies": {
+    "eslint": "^8.8.0",
+    "firebase": "^9.6.6"
+  }
+}
