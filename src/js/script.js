@@ -8,16 +8,19 @@ const nowReadMore = document.querySelector('#read-more-now');
 const expReadMore = document.querySelector('#read-more-exp');
 const skillsReadMore = document.querySelector('#read-more-skills');
 
+const linkJavascript = document.querySelector('#link-javascript');
+const linkJavascriptMobile = document.querySelector('#link-javascript-mobile');
 const linkCypress = document.querySelector('#link-cypress');
 const linkCypressMobile = document.querySelector('#link-cypress-mobile');
 const linkSelenium = document.querySelector('#link-selenium');
 const linkSeleniumMobile = document.querySelector('#link-selenium-mobile');
-const linkJavascript = document.querySelector('#link-javascript');
-const linkJavascriptMobile = document.querySelector('#link-javascript-mobile');
+const linkRest = document.querySelector('#link-rest');
+const linkRestMobile = document.querySelector('#link-rest-mobile');
 
+const overlayJavascript = document.querySelector('#cert-javascript');
 const overlayCypress = document.querySelector('#cert-cypress');
 const overlaySelenium = document.querySelector('#cert-selenium');
-const overlayJavascript = document.querySelector('#cert-javascript');
+const overlayRest = document.querySelector('#cert-rest');
 
 const emailSpans = document.querySelectorAll('span[name="email"]');
 
@@ -37,10 +40,10 @@ class App {
     }
 
     #addClickListeners(showCert, hideCert) {
-        [linkCypress, linkCypressMobile, linkSelenium, linkSeleniumMobile, linkJavascript, linkJavascriptMobile].forEach((el) => {
+        [linkCypress, linkCypressMobile, linkSelenium, linkSeleniumMobile, linkJavascript, linkJavascriptMobile, linkRest, linkRestMobile].forEach((el) => {
             el.addEventListener('click', showCert);
         });
-        [overlayCypress, overlayJavascript, overlaySelenium].forEach((el) => {
+        [overlayCypress, overlayJavascript, overlaySelenium, overlayRest].forEach((el) => {
             el.addEventListener('click', hideCert);
         });
     }
@@ -52,21 +55,25 @@ class App {
     }
 
     #showCert(ev) {
+        if (ev.target === linkJavascript || ev.target === linkJavascriptMobile) {
+            overlayJavascript.style.display = 'block';
+        }
         if (ev.target === linkCypress || ev.target === linkCypressMobile) {
             overlayCypress.style.display = 'block';
         }
         if (ev.target === linkSelenium || ev.target === linkSeleniumMobile) {
             overlaySelenium.style.display = 'block';
         }
-        if (ev.target === linkJavascript || ev.target === linkJavascriptMobile) {
-            overlayJavascript.style.display = 'block';
+        if (ev.target === linkRest || ev.target === linkRestMobile) {
+            overlayRest.style.display = 'block';
         }
     }
 
     #hideCert() {
+        overlayJavascript.style.display = 'none';
         overlayCypress.style.display = 'none';
         overlaySelenium.style.display = 'none';
-        overlayJavascript.style.display = 'none';
+        overlayRest.style.display = 'none';
     }
 
     #showEmail() {
@@ -117,7 +124,7 @@ class App {
             <p class="text">
                 <em>Cypress</em> is another tool I am fluent with and I've been using it with success in many smaller
                 (not
-                enterprise level) projects. I have a strong knowledge of <em>Javascript</em> and <em>Typescript</em>.
+                enterprise level) projects. I have a strong knowledge of <em>Javascript</em> and <em>Typescript</em> and experience in functional programming.
             </p>
             <p class="text">
                 Of course I am also fluent in <em>HTML5</em> and <em>CSS3</em> as well as <em>Gherkin</em> syntax.
