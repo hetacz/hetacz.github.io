@@ -1,7 +1,9 @@
 :root {
     --primaryMain:   #A5D6A7de;
+    --primary99:     #a5daa599;
     --tertiaryMain:  #90caf9de;
     --tertiaryFull:  #90caf9ff;
+    --background:    #102030ff;
 
     /*
     full, main, mid1, mid2, dis, out#6292ec
@@ -12,12 +14,13 @@
     --whiteh2to: #e3f2fd24;
     --whiteh1: #e3f2fd20;
     --whiteh1to: #e3f2fd38;
+    --white0: #e3f2fd60
     --whiteDE:#ffffffde;
 }
 
 body {
-    background-color: #102030; /*#212121*/ /*#263238*/
-    color: var(--whiteDE);
+    background-color: var(--background); /*#212121*/ /*#263238*/
+    color: #ffffffde;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
 }
@@ -25,7 +28,7 @@ body {
 div.container {
     /*border: 2px solid #var(--whiteDE);*/
     /* background-color: #20294560; */
-    background-color:var(--white);
+    background-color: var(--white);
     padding: 10px;
     width: 90%;
     max-width: 600px;
@@ -92,10 +95,17 @@ p.text {
     padding-right: 20px;
 }
 
+p.pgp {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 h1 {
     background: linear-gradient(to right, var(--whiteh2), var(--whiteh1to));
     font-size: 2.5rem;
-    font-weight: 200;
+    font-weight: 200; /* decide ? */
     color: var(--primaryMain);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -109,7 +119,7 @@ h1 {
 h2 {
     background: linear-gradient(to right, var(--whiteh2), var(--whiteh2to));
     font-size: 1.75rem;
-    font-weight: lighter;
+    font-weight: 200;  /* decide ? */
     color :var(--primaryMain);
     margin-top: 0;
     margin-bottom: 1rem;
@@ -200,6 +210,58 @@ img.overlay {
 
 div.mobile {
     display: none;
+}
+
+
+
+.accordion {
+    color: #ffffffde;;
+    cursor: pointer;
+    padding: 5px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 200;
+    transition: 0.4s;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: var(--primary99);
+	box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */
+		0px 3px 4px 0px hsla(0,0%,0%,0.14),
+		0px 3px 3px -2px hsla(0,0%,0%,0.12),
+		0px 1px 8px 0px hsla(0,0%,0%,0.2);
+}
+
+.active,
+.accordion:hover {
+    background-color: var(--primaryMain);
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #ffffffde;
+    font-weight: bold;
+    margin-left: 5px;
+    float: right;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 5px;
+    background-color: var(--background);
+    color: #ffffffde;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 @media (max-width: 750px) {

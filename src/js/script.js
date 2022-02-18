@@ -24,11 +24,14 @@ const overlayRest = document.querySelector('#cert-rest');
 
 const emailSpans = document.querySelectorAll('span[name="email"]');
 
+const accHeader = document.querySelector('#PGP-accordion');
+const accPanel = document.querySelector('#PGP-panel');
+
 class App {
 
     constructor() {
         this.#addInitialListeners(this.#showNow.bind(this), this.#showExp.bind(this), this.#showSkills.bind(this));
-        this.#addClickListeners(this.#showCert.bind(this), this.#hideCert.bind(this));
+        this.#addClickListeners(this.#showCert.bind(this), this.#hideCert.bind(this), this.#accordion.bind(this));
         this.#addEmailListeners(this.#showEmail.bind(this));
     }
 
@@ -39,13 +42,14 @@ class App {
         });
     }
 
-    #addClickListeners(showCert, hideCert) {
+    #addClickListeners(showCert, hideCert, accordion) {
         [linkCypress, linkCypressMobile, linkSelenium, linkSeleniumMobile, linkJavascript, linkJavascriptMobile, linkRest, linkRestMobile].forEach((el) => {
             el.addEventListener('click', showCert);
         });
         [overlayCypress, overlayJavascript, overlaySelenium, overlayRest].forEach((el) => {
             el.addEventListener('click', hideCert);
         });
+        accHeader.addEventListener('click', accordion);
     }
 
     #addEmailListeners(listener) {
@@ -88,7 +92,7 @@ class App {
             <p class="text">
                 I like my job, as there are always challenges to overcome, which prevent me from getting bored. My
                 occupation gives me satisfaction from solving puzzles, even if some issues may sometimes turn to be a
-                little frustrating, the programmer high is no doubt worth time spent.
+                little frustrating, the programmer's high is no doubt worth the time spent.
             </p>
             <p class="text">
                 Apart from working, I love to learn and read, I constantly try to improve myself, acquire new skills,
@@ -165,6 +169,15 @@ class App {
         `;
         skillsReadMore.remove();
         skillsDiv.insertAdjacentHTML('beforeend', html);
+    }
+
+    #accordion() {
+        accHeader.classList.toggle('active');
+        if (accPanel.style.maxHeight) {
+            accPanel.style.maxHeight = null;
+        } else {
+            accPanel.style.maxHeight = accPanel.scrollHeight + 'px';
+        }
     }
 }
 
