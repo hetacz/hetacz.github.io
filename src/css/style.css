@@ -1,6 +1,8 @@
 :root {
+    --primaryFull:   #A5D6A7de;
     --primaryMain:   #A5D6A7de;
     --primary99:     #a5daa599;
+    --primary80:     #A5D6A780;
     --tertiaryMain:  #90caf9de;
     --tertiaryFull:  #90caf9ff;
     --background:    #102030ff;
@@ -215,7 +217,7 @@ div.mobile {
 
 
 .accordion {
-    color: #ffffffde;;
+    color:  var(--background);
     cursor: pointer;
     padding: 5px;
     width: 90%;
@@ -236,14 +238,17 @@ div.mobile {
 		0px 1px 8px 0px hsla(0,0%,0%,0.2);
 }
 
-.active,
 .accordion:hover {
+    background-color: var(--primaryFull);
+}
+
+.accordion.active {
     background-color: var(--primaryMain);
 }
 
 .accordion:after {
     content: '\002B';
-    color: #ffffffde;
+    color: var(--background);
     font-weight: bold;
     margin-left: 5px;
     float: right;
