@@ -121,17 +121,15 @@ class App {
                 well-implemented <em>Page Object Pattern</em> with components and OOP principles in design. I am
                 familiar with
                 design patterns such as Facade, Factory and Singleton. I can integrate such framework with
-                <em>Github</em> or
-                <em>Azure</em> and configure pipelines for Continous Integration. I am also experienced with API
-                automation and have a working knowledge of <em>Rest-assured</em> library.
+                <em>Github</em>, <em>Gitlab</em> or
+                <em>Azure</em> and configure pipelines for Continous Integration. Setting up parallel execution on cloud using <em>Selenium Grid</em> is not a problem for me. API tests automation is another field I am experienced with and I have a working knowledge of <em>Rest-assured</em> library.
             </p>
             <p class="text">
                 <em>Cypress</em> is another tool I am fluent with and I've been using it with success in many smaller
-                (not
-                enterprise level) projects. I have a strong knowledge of <em>Javascript</em> and <em>Typescript</em> and experience in functional programming.
+                projects. I have a strong knowledge of <em>Javascript</em> and <em>Typescript</em> and experience in functional programming.
             </p>
             <p class="text">
-                Of course I am also fluent in <em>HTML5</em> and <em>CSS3</em> as well as <em>Gherkin</em> syntax.
+                Of course I am also fluent in <em>HTML5</em> and <em>CSS3</em>.
             </p>
             <p class="text">
                 I am a huge fan of agile development and I also have a very positive experience of working in a
@@ -150,7 +148,9 @@ class App {
             `
             <ul class="more-bot">
                 <li>Cucumber</li>
-                <li>Github, Azure</li>
+                <li>Docker</li>
+                <li>Spring Boot</li>
+                <li>Github, Azure, Gitlab</li>
                 <li>Rest-Assured</li>
                 <li>Postman</li>
                 <li>Knowledge of agile and SAFe methodology</li>
