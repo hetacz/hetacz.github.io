@@ -96,9 +96,7 @@ class App {
             </p>
             <p class="text">
                 Apart from working, I love to learn and read, I constantly try to improve myself, acquire new skills,
-                and even learn about random scientific facts. I can sometimes spend a night reading about some long lost
-                Bronze Age culture you probably never heard about, and then, in the morning spend few more hours reading
-                news from markets and only then sleep during the day.
+                and even read some 'science gossip'. Instead of mindlessly scrolling the Instagram I preffer to spend a night reading Wikipedia or news from tech and markets.
             </p>
             <p class="text">
                 Investing money is other thing I do enjoy. I am currently involved in social lending, crypto, real
