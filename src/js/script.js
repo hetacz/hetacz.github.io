@@ -16,11 +16,14 @@ const linkSelenium = document.querySelector('#link-selenium');
 const linkSeleniumMobile = document.querySelector('#link-selenium-mobile');
 const linkRest = document.querySelector('#link-rest');
 const linkRestMobile = document.querySelector('#link-rest-mobile');
+const linkTest = document.querySelector('#link-test');
+const linkTestMobile = document.querySelector('#link-test-mobile');
 
 const overlayJavascript = document.querySelector('#cert-javascript');
 const overlayCypress = document.querySelector('#cert-cypress');
 const overlaySelenium = document.querySelector('#cert-selenium');
 const overlayRest = document.querySelector('#cert-rest');
+const overlayTest = document.querySelector('#cert-test');
 
 const emailSpans = document.querySelectorAll('span[name="email"]');
 
@@ -43,10 +46,10 @@ class App {
     }
 
     #addClickListeners(showCert, hideCert, accordion) {
-        [linkCypress, linkCypressMobile, linkSelenium, linkSeleniumMobile, linkJavascript, linkJavascriptMobile, linkRest, linkRestMobile].forEach((el) => {
+        [linkCypress, linkCypressMobile, linkSelenium, linkSeleniumMobile, linkJavascript, linkJavascriptMobile, linkRest, linkRestMobile, linkTest, linkTestMobile].forEach((el) => {
             el.addEventListener('click', showCert);
         });
-        [overlayCypress, overlayJavascript, overlaySelenium, overlayRest].forEach((el) => {
+        [overlayCypress, overlayJavascript, overlaySelenium, overlayRest, overlayTest].forEach((el) => {
             el.addEventListener('click', hideCert);
         });
         accHeader.addEventListener('click', accordion);
@@ -71,6 +74,9 @@ class App {
         if (ev.target === linkRest || ev.target === linkRestMobile) {
             overlayRest.style.display = 'block';
         }
+        if (ev.target === linkTest || ev.target === linkTestMobile) {
+            overlayTest.style.display = 'block';
+        }
     }
 
     #hideCert() {
@@ -78,6 +84,7 @@ class App {
         overlayCypress.style.display = 'none';
         overlaySelenium.style.display = 'none';
         overlayRest.style.display = 'none';
+        overlayTest.style.display = 'none';
     }
 
     #showEmail() {
@@ -157,7 +164,6 @@ class App {
             <ul>
                 <li>English - fluent - <em>C1</em></li>
                 <li>German - reading/writing - <em>B1</em></li>
-                <li>French - reading/writing - <em>A1</em></li>
                 <li>Polish - native</li>
             </ul>
             <h3>Other:</h3>
