@@ -18,12 +18,18 @@ const linkRest = document.querySelector('#link-rest');
 const linkRestMobile = document.querySelector('#link-rest-mobile');
 const linkTest = document.querySelector('#link-test');
 const linkTestMobile = document.querySelector('#link-test-mobile');
+const linkSpringBoot = document.querySelector('#link-spring-boot');
+const linkSpringBootMobile = document.querySelector('#link-spring-boot-mobile');
+const linkJpaHibernate = document.querySelector('#link-jpa-hibernate');
+const linkJpaHibernateMobile = document.querySelector('#link-jpa-hibernate-mobile');
 
 const overlayJavascript = document.querySelector('#cert-javascript');
 const overlayCypress = document.querySelector('#cert-cypress');
 const overlaySelenium = document.querySelector('#cert-selenium');
 const overlayRest = document.querySelector('#cert-rest');
 const overlayTest = document.querySelector('#cert-test');
+const overlaySpringBoot = document.querySelector('#cert-spring-boot');
+const overlayJpaHibernate = document.querySelector('#cert-jpa-hibernate');
 
 const emailSpans = document.querySelectorAll('span[name="email"]');
 
@@ -46,10 +52,10 @@ class App {
     }
 
     #addClickListeners(showCert, hideCert, accordion) {
-        [linkCypress, linkCypressMobile, linkSelenium, linkSeleniumMobile, linkJavascript, linkJavascriptMobile, linkRest, linkRestMobile, linkTest, linkTestMobile].forEach((el) => {
+        [linkCypress, linkCypressMobile, linkSelenium, linkSeleniumMobile, linkJavascript, linkJavascriptMobile, linkRest, linkRestMobile, linkTest, linkTestMobile, linkSpringBoot, linkSpringBootMobile, linkJpaHibernate, linkJpaHibernateMobile].forEach((el) => {
             el.addEventListener('click', showCert);
         });
-        [overlayCypress, overlayJavascript, overlaySelenium, overlayRest, overlayTest].forEach((el) => {
+        [overlayCypress, overlayJavascript, overlaySelenium, overlayRest, overlayTest, overlaySpringBoot, overlayJpaHibernate].forEach((el) => {
             el.addEventListener('click', hideCert);
         });
         accHeader.addEventListener('click', accordion);
@@ -77,6 +83,12 @@ class App {
         if (ev.target === linkTest || ev.target === linkTestMobile) {
             overlayTest.style.display = 'block';
         }
+        if (ev.target === linkSpringBoot || ev.target === linkSpringBootMobile) {
+            overlayTest.style.display = 'block';
+        }
+        if (ev.target === linkJpaHibernate || ev.target === linkJpaHibernateMobile) {
+            overlayTest.style.display = 'block';
+        }
     }
 
     #hideCert() {
@@ -85,6 +97,8 @@ class App {
         overlaySelenium.style.display = 'none';
         overlayRest.style.display = 'none';
         overlayTest.style.display = 'none';
+        overlaySpringBoot.style.display = 'none';
+        overlayJpaHibernate.style.display = 'none';
     }
 
     #showEmail() {
@@ -154,11 +168,10 @@ class App {
             <ul class="more-bot">
                 <li>Cucumber</li>
                 <li>Docker</li>
-                <li>Spring Boot</li>
-                <li>Github, Azure, Gitlab</li>
+                <li>Git</li>
                 <li>Rest-Assured</li>
                 <li>Postman</li>
-                <li>Knowledge of agile and SAFe methodology</li>
+                <li>Experience working in Agile: Scrum, Kanban, SAFe</li>
             </ul>
                 <h3>Languages:</h3>
             <ul>
