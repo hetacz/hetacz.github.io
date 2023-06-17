@@ -45,7 +45,7 @@ div.container {
 
 div.top-menu {
     margin-top: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 ul {
@@ -91,8 +91,8 @@ p.teeny {
 
 p.text {
     line-height: 1.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -133,11 +133,12 @@ h2 {
 }
 
 h3 {
-    font-weight: bolder;
+    font-weight: lighter;
     color: var(--primaryMain);
-    padding-left: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
+    font-size: 1.25rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
 }
 
 h6 {
@@ -213,8 +214,6 @@ img.overlay {
 div.mobile {
     display: none;
 }
-
-
 
 .accordion {
     color:  var(--background);
