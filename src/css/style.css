@@ -43,19 +43,12 @@ div.container {
 
 div.links {
     padding: 5px 20px;
+    padding-bottom: 0px;
 }
 
 span.link {
     padding-left: 20px;
     padding-right: 20px;
-}
-
-.links-left {
-    float: left;
-}
-
-.links-right {
-    float: right;
 }
 
 div.top-menu {
@@ -124,8 +117,8 @@ h1 {
     font-size: 2.5rem;
     font-weight: 200; /* decide ? */
     color: var(--primaryMain);
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
     box-shadow: /* offset-x | offset-y | blur-radius | spread-radius | color */ 0 4px 5px 0 hsla(0, 0%, 0%, 0.14),
     0 1px 10px 0 hsla(0, 0%, 0%, 0.12),
     0 2px 4px -1px hsla(0, 0%, 0%, 0.2);
@@ -137,7 +130,7 @@ h2 {
     font-weight: 200; /* decide ? */
     color: var(--primaryMain);
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
     box-shadow: /* offset-x | offset-y | blur-radius | spread-radius | color */ 0 1px 1px 0 hsla(0, 0%, 0%, 0.14),
     0 2px 1px -1px hsla(0, 0%, 0%, 0.12),
     0 1px 3px 0 hsla(0, 0%, 0%, 0.2);
@@ -224,6 +217,10 @@ div.mobile {
     display: none;
 }
 
+.narrow {
+    display: none;
+}
+
 .accordion {
     color: var(--background);
     cursor: pointer;
@@ -275,7 +272,7 @@ div.mobile {
     margin-right: 5%;
 }
 
-@media (max-width: 750px) {
+/* @media (max-width: 750px) {
     div.no-mobile {
         display: none;
     }
@@ -287,5 +284,66 @@ div.mobile {
     img.overlay {
         transform: translate(-50%, -50%) scale(0.2, 0.2);
         -ms-transform: translate(-50%, -50%) scale(0.2, 0.2);
+    }
+} */
+
+@media (max-width: 620px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .wide {
+        display: none;
+    }
+
+    .narrow {
+        display: block;
+    }
+
+    h6 {
+        text-align: center;
+        line-height: 1.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    div.no-mobile {
+        display: none;
+    }
+
+    div.mobile {
+        display: block;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    span.link {
+        padding-left: 0px;
+        padding-right: 10px;
+        font-size: 0.9rem;
+    }
+
+    span.link-right-mobile {
+        padding-left: 10px;
+        padding-right: 0px;
+        font-size: 0.9rem;
+    }
+
+    p.text {
+        font-size: 0.9rem;
+    }
+
+    li {
+        font-size: 0.9rem;
     }
 }
